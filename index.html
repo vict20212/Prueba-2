@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="vista/js/main.js"></script>
+
+
+
+</head>
+<body>
+
+<div class="container">
+  <h2>Usuarios</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="nombre" class="form-control" id="txtnombre"  name="nombre">
+    </div>
+    <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="apellido" class="form-control" id="txtapellido"  name="apellido">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="txtemail" placeholder="Enter email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="contraseña">Contraseña:</label>
+        <input type="contraseña" class="form-control" id="txtcontraseña" placeholder="Enter password" name="contraseña">
+      </div>
+      <div class="form-group">
+      <label for="txtRol" >Rol:</label>
+      <select id="selectRol">
+        <option value="descripcion"></option>
+        
+      </select>
+</div>
+
+
+    <button type="button" class="btn btn-default" id="btnRegistrar">Submit</button>
+  </form>
+</div>
+
+
+<div class="container">
+    <h2>Usuarios</h2>
+         
+    <table class="table" id="tablaUsuarios">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Contraseña</th>
+          <th>Rol</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpoUsuarios">
+       
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
