@@ -18,6 +18,12 @@ class usuariosControl{
         $objRespuesta = usuarioModelo::mdlListarUsuario();
         echo json_encode($objRespuesta);
     }
+
+    public function ctrListarURol(){
+        $objRespuesta = usuarioModelo::mdlListarRol();
+        echo json_encode($objRespuesta);
+    }
+
 }
 
 if (isset($_POST["nombre"]) && isset($_POST["apellido"]) && isset($_POST["email"]) && isset($_POST["contraseña"])){
@@ -32,4 +38,9 @@ if (isset($_POST["nombre"]) && isset($_POST["apellido"]) && isset($_POST["email"
 if (isset($_POST["cargar"])){
     $objUsuarios = new usuariosControl();
     $objUsuarios->ctrListarUsuario();
+}
+
+if (isset($_POST["cargarRol"])){
+    $objUsuarios = new usuariosControl();
+    $objUsuarios->ctrListarURol();
 }
