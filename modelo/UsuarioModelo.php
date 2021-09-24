@@ -36,9 +36,9 @@ class usuarioModelo
         }
         return $mensaje;
     }
-    public static function mdlListarUsuario($idRol)
+    public static function mdlListarUsuario()
     {
-        $objRespuesta = conexion::conectar()->prepare("SELECT usuario.idusuario,usuario.nombre,usuario.apellido,usuario.email,usuario.contraseña,usuario.idRol FROM usuario INNER JOIN rol ON usuario.idRol=rol.idRol WHERE idusuario='$idRol");
+        $objRespuesta = conexion::conectar()->prepare("SELECT usuario.idusuario,usuario.nombre,usuario.apellido,usuario.email,usuario.contraseña,usuario.idRol FROM usuario INNER JOIN rol ON usuario.idRol=rol.idRol");
         $objRespuesta->execute();
         $objListarUsuario = $objRespuesta->fetchAll();
         $objRespuesta = null;

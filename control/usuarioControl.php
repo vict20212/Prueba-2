@@ -7,6 +7,7 @@ class usuariosControl{
     public $apellido;
     public $email;
     public $contraseña;
+    public $idRol;
 
 
     public function ctrRegistrarUsuario(){
